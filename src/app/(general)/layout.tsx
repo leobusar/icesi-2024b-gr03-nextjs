@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/nav-bar/NavBar";
+import { Providers } from "@/store/Providers";
 
 export default function GeneralLayout({
  children
@@ -8,7 +9,9 @@ export default function GeneralLayout({
   return (
     <div>
       <Navbar />
-      {children}
+      <Providers>
+        {children}
+      </Providers>
     </div>
   );
 }
